@@ -1,0 +1,62 @@
+schema_version: 1
+rules:
+  A1: &a1
+    min_sessions: 3
+    min_distinct_scenarios: 2
+    min_independent_grammar_accuracy: 0.80
+    min_grammar_opportunities: 20
+    min_task_success: 0.80
+    min_task_checks: 10
+    min_delayed_vocabulary_recall: 0.80
+    min_delayed_vocabulary_checks: 20
+    min_listening_success: 0.80
+    min_listening_checks: 10
+    min_transfer_success: 0.75
+    min_transfer_checks: 8
+    required_objective_coverage: 1.0
+  A2:
+    <<: *a1
+    min_sessions: 4
+    min_distinct_scenarios: 3
+    min_grammar_opportunities: 24
+    min_delayed_vocabulary_checks: 24
+    min_transfer_success: 0.80
+  B1:
+    <<: *a1
+    min_sessions: 5
+    min_distinct_scenarios: 3
+    min_independent_grammar_accuracy: 0.82
+    min_grammar_opportunities: 30
+    min_task_success: 0.82
+    min_delayed_vocabulary_checks: 30
+    min_listening_success: 0.82
+    min_transfer_success: 0.80
+    min_transfer_checks: 10
+  B2:
+    <<: *a1
+    min_sessions: 5
+    min_distinct_scenarios: 4
+    min_independent_grammar_accuracy: 0.85
+    min_grammar_opportunities: 36
+    min_task_success: 0.85
+    min_task_checks: 12
+    min_delayed_vocabulary_recall: 0.85
+    min_delayed_vocabulary_checks: 36
+    min_listening_success: 0.85
+    min_listening_checks: 12
+    min_transfer_success: 0.82
+    min_transfer_checks: 12
+  C1:
+    <<: *a1
+    min_sessions: 6
+    min_distinct_scenarios: 4
+    min_independent_grammar_accuracy: 0.88
+    min_grammar_opportunities: 40
+    min_task_success: 0.88
+    min_task_checks: 15
+    min_delayed_vocabulary_recall: 0.88
+    min_delayed_vocabulary_checks: 40
+    min_listening_success: 0.88
+    min_listening_checks: 15
+    min_transfer_success: 0.85
+    min_transfer_checks: 15

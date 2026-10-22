@@ -1,0 +1,155 @@
+schema_version: 1
+id: cafe
+title: Café
+category: essential
+description: Order, solve problems, socialize, and discuss café culture from A1 to C1.
+supported_levels: [A1, A2, B1, B2, C1]
+default_personality_id: patient_barista
+allowed_personality_ids: [patient_barista, efficient_waiter, lively_regular]
+feedback:
+  timing: natural_pause
+  require_successful_retry: true
+  explanation_language:
+    A1: en
+    A2: en
+    B1: de
+    B2: de
+    C1: de
+  uncertain_transcription: ask_for_repetition_before_correction
+levels:
+  A1:
+    objectives:
+      - id: a1_order
+        description: Order a drink and food item politely.
+        evidence: Completes the order without an English prompt.
+        minimum_opportunities: 5
+      - id: a1_pay
+        description: Ask the price and choose a payment method.
+        evidence: Understands the total and responds appropriately.
+        minimum_opportunities: 3
+    vocabulary_ids: [kaffee, tee, wasser, milch, kuchen, speisekarte, bestellen, zahlen, kosten, bitte, danke]
+    grammar_ids: [present_regular, main_clause_v2, questions, accusative_articles, polite_moechten]
+    scenarios:
+      - id: a1_counter_order
+        title: First counter order
+        learner_role: customer
+        partner_role: barista
+        situation: Order one drink and one food item at the counter.
+        success_criteria: [Greets the barista, Uses a polite request, Answers a follow-up choice, Closes with thanks]
+      - id: a1_pay_bill
+        title: Ask and pay
+        learner_role: customer
+        partner_role: waiter
+        situation: Ask what the order costs and pay by card or cash.
+        success_criteria: [Asks the price, Identifies the total, States a payment method]
+  A2:
+    objectives:
+      - id: a2_dietary_need
+        description: Explain an allergy and check ingredients.
+        evidence: Obtains a safe recommendation through follow-up questions.
+        minimum_opportunities: 5
+      - id: a2_repair_order
+        description: Resolve a simple mistake or missing reservation.
+        evidence: Describes what happened and requests a solution politely.
+        minimum_opportunities: 4
+    vocabulary_ids: [mitnehmen, rechnung, zutat, allergie, enthalten, empfehlen, reservieren]
+    grammar_ids: [perfect_tense, weil_clause, polite_konjunktiv, adjective_endings_basic]
+    scenarios:
+      - id: a2_allergy_check
+        title: Check an allergy
+        learner_role: customer with a nut allergy
+        partner_role: barista
+        situation: Check two options and choose a safe item.
+        success_criteria: [Names the allergy, Asks about ingredients, Gives a reason, Confirms the final choice]
+      - id: a2_wrong_order
+        title: Correct a wrong order
+        learner_role: customer
+        partner_role: waiter
+        situation: A dine-in order arrived in takeaway packaging and one item is wrong.
+        success_criteria: [Reports the mistake, Uses a polite repair request, Confirms the solution]
+  B1:
+    objectives:
+      - id: b1_complaint
+        description: Make a specific complaint and negotiate a fair remedy.
+        evidence: Explains the problem, its effect, and an acceptable resolution.
+        minimum_opportunities: 5
+      - id: b1_preference
+        description: Compare options and justify a detailed preference.
+        evidence: Sustains a multi-turn exchange with reasons and contrasts.
+        minimum_opportunities: 5
+    vocabulary_ids: [beschwerde, service, auswahl, sich_beschweren, vertragen, erstatten]
+    grammar_ids: [subordinate_contrast, relative_clauses, hypothetical_konjunktiv]
+    scenarios:
+      - id: b1_cold_meal
+        title: Negotiate a remedy
+        learner_role: dissatisfied customer
+        partner_role: shift supervisor
+        situation: A meal arrived cold after a long wait.
+        success_criteria: [Gives a clear sequence of events, Distinguishes fact from preference, Proposes and negotiates a remedy]
+      - id: b1_recommend_a_cafe
+        title: Recommend a café
+        learner_role: local customer
+        partner_role: visiting friend
+        situation: Compare two cafés for a study meeting.
+        success_criteria: [Describes both options, Uses contrast, Supports a recommendation, Responds to a counter-preference]
+  B2:
+    objectives:
+      - id: b2_service_plan
+        description: Negotiate a complex group booking with constraints.
+        evidence: Reaches an explicit agreement covering cost, diet, timing, and service.
+        minimum_opportunities: 6
+      - id: b2_sustainability
+        description: Argue a position on café sustainability.
+        evidence: Presents, qualifies, and defends a structured position.
+        minimum_opportunities: 6
+    vocabulary_ids: [preis_leistung, kundschaft, arbeitsbedingung, lebensmittelverschwendung, nachhaltig, verzichten_auf, abhaengen_von]
+    grammar_ids: [passive_voice, advanced_connectors, indirect_questions, nominalisation]
+    scenarios:
+      - id: b2_group_booking
+        title: Plan a group event
+        learner_role: event organizer
+        partner_role: café manager
+        situation: Negotiate a booking for fifteen people with dietary and budget constraints.
+        success_criteria: [Elicits missing terms, Explains priorities, Offers trade-offs, Summarizes the agreement]
+      - id: b2_waste_debate
+        title: Reduce café waste
+        learner_role: regular customer
+        partner_role: café owner
+        situation: Discuss which waste-reduction measures are realistic.
+        success_criteria: [Builds a structured argument, Concedes a valid objection, Uses causal evidence, Suggests a practical compromise]
+  C1:
+    objectives:
+      - id: c1_policy
+        description: Evaluate a packaging policy from competing perspectives.
+        evidence: Synthesizes attributed positions and reaches a qualified judgment.
+        minimum_opportunities: 7
+      - id: c1_business_tradeoff
+        description: Advise on a complex café business decision.
+        evidence: Weighs operational, social, and financial consequences precisely.
+        minimum_opportunities: 7
+    vocabulary_ids: [lieferkette, mehrwegpflicht, wirtschaftlichkeit, zielkonflikt, rahmenbedingung, abwaegen, sich_auswirken_auf, voraussetzen]
+    grammar_ids: [reported_speech, hedging_precision, cohesive_argument]
+    scenarios:
+      - id: c1_packaging_panel
+        title: Packaging policy panel
+        learner_role: policy adviser
+        partner_role: café association representative
+        situation: Evaluate a proposed reusable-packaging requirement using several stakeholder claims.
+        success_criteria: [Attributes claims accurately, Qualifies uncertain evidence, Resolves conflicting objectives, Gives a nuanced recommendation]
+      - id: c1_supply_strategy
+        title: Supply-chain strategy
+        learner_role: independent consultant
+        partner_role: café owner
+        situation: Advise whether to change suppliers after price and labor concerns emerge.
+        success_criteria: [Diagnoses the trade-off, Tests assumptions, Anticipates second-order effects, Presents a coherent decision framework]
+connections:
+  - target_island_id: shopping
+    shared_vocabulary_ids: [kosten, zahlen, rechnung]
+    shared_grammar_ids: [questions, polite_konjunktiv]
+    transfer_scenario: Buy packaged coffee and resolve a pricing discrepancy.
+    planned: true
+  - target_island_id: friend
+    shared_vocabulary_ids: [empfehlen, auswahl, nachhaltig]
+    shared_grammar_ids: [subordinate_contrast, advanced_connectors]
+    transfer_scenario: Meet a friend and debate where to eat or study.
+    planned: true

@@ -34,6 +34,11 @@ Start FastAPI and Streamlit together:
 The API health endpoint is available at `http://127.0.0.1:8000/health` and Streamlit at
 `http://127.0.0.1:8501`.
 
+The validated Café curriculum lives under `config/`. It contains the A1-C1 level plans,
+German vocabulary and grammar catalogs, tutor personalities, feedback rules, and quantitative
+progression gates. The API exposes the island at `http://127.0.0.1:8000/api/islands/cafe`.
+Invalid YAML, duplicate IDs, or broken cross-file references stop the API at startup.
+
 Run local diagnostics without starting either web service:
 
 ```powershell

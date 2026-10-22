@@ -28,6 +28,7 @@ class Settings(BaseSettings):
     ollama_model: str = "qwen3:8b"
     data_dir: Path = Field(default=Path("data"))
     model_dir: Path = Field(default=Path("models"))
+    curriculum_dir: Path = Field(default=Path("config"))
 
     @property
     def database_path(self) -> Path:

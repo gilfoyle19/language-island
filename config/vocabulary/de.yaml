@@ -1,0 +1,41 @@
+schema_version: 1
+entries:
+  - {id: kaffee, lemma: Kaffee, english: coffee, part_of_speech: noun, article: der, plural: die Kaffees, levels: [A1], chunks: ["einen Kaffee bestellen"]}
+  - {id: tee, lemma: Tee, english: tea, part_of_speech: noun, article: der, plural: die Tees, levels: [A1], chunks: ["einen Tee nehmen"]}
+  - {id: wasser, lemma: Wasser, english: water, part_of_speech: noun, article: das, plural: die Wässer, levels: [A1], usage_note: "Usually used as a mass noun."}
+  - {id: milch, lemma: Milch, english: milk, part_of_speech: noun, article: die, plural: null, levels: [A1], usage_note: "Normally no plural in this meaning."}
+  - {id: kuchen, lemma: Kuchen, english: cake, part_of_speech: noun, article: der, plural: die Kuchen, levels: [A1]}
+  - {id: speisekarte, lemma: Speisekarte, english: menu, part_of_speech: noun, article: die, plural: die Speisekarten, levels: [A1]}
+  - {id: bestellen, lemma: bestellen, english: to order, part_of_speech: verb, principal_parts: [bestellt, bestellte, hat bestellt], levels: [A1], chunks: ["etwas bestellen"]}
+  - {id: zahlen, lemma: zahlen, english: to pay, part_of_speech: verb, principal_parts: [zahlt, zahlte, hat gezahlt], levels: [A1], chunks: ["mit Karte zahlen"]}
+  - {id: kosten, lemma: kosten, english: to cost, part_of_speech: verb, principal_parts: [kostet, kostete, hat gekostet], levels: [A1]}
+  - {id: bitte, lemma: bitte, english: please / you're welcome, part_of_speech: phrase, levels: [A1]}
+  - {id: danke, lemma: danke, english: thank you, part_of_speech: phrase, levels: [A1]}
+  - {id: mitnehmen, lemma: mitnehmen, english: to take away, part_of_speech: verb, principal_parts: [nimmt mit, nahm mit, hat mitgenommen], levels: [A2], chunks: ["zum Mitnehmen"]}
+  - {id: rechnung, lemma: Rechnung, english: bill, part_of_speech: noun, article: die, plural: die Rechnungen, levels: [A2], chunks: ["die Rechnung bringen"]}
+  - {id: zutat, lemma: Zutat, english: ingredient, part_of_speech: noun, article: die, plural: die Zutaten, levels: [A2]}
+  - {id: allergie, lemma: Allergie, english: allergy, part_of_speech: noun, article: die, plural: die Allergien, levels: [A2], chunks: ["eine Allergie gegen Nüsse"]}
+  - {id: enthalten, lemma: enthalten, english: to contain, part_of_speech: verb, principal_parts: [enthält, enthielt, hat enthalten], levels: [A2]}
+  - {id: empfehlen, lemma: empfehlen, english: to recommend, part_of_speech: verb, principal_parts: [empfiehlt, empfahl, hat empfohlen], levels: [A2]}
+  - {id: reservieren, lemma: reservieren, english: to reserve, part_of_speech: verb, principal_parts: [reserviert, reservierte, hat reserviert], levels: [A2]}
+  - {id: beschwerde, lemma: Beschwerde, english: complaint, part_of_speech: noun, article: die, plural: die Beschwerden, levels: [B1]}
+  - {id: service, lemma: Service, english: service, part_of_speech: noun, article: der, plural: die Services, levels: [B1]}
+  - {id: auswahl, lemma: Auswahl, english: selection, part_of_speech: noun, article: die, plural: die Auswahlen, levels: [B1]}
+  - {id: sich_beschweren, lemma: sich beschweren, english: to complain, part_of_speech: verb, principal_parts: [beschwert sich, beschwerte sich, hat sich beschwert], levels: [B1], chunks: ["sich über etwas beschweren"]}
+  - {id: vertragen, lemma: vertragen, english: to tolerate, part_of_speech: verb, principal_parts: [verträgt, vertrug, hat vertragen], levels: [B1], chunks: ["Laktose nicht vertragen"]}
+  - {id: erstatten, lemma: erstatten, english: to refund, part_of_speech: verb, principal_parts: [erstattet, erstattete, hat erstattet], levels: [B1]}
+  - {id: preis_leistung, lemma: Preis-Leistungs-Verhältnis, english: value for money, part_of_speech: noun, article: das, plural: die Preis-Leistungs-Verhältnisse, levels: [B2]}
+  - {id: kundschaft, lemma: Kundschaft, english: clientele, part_of_speech: noun, article: die, plural: null, levels: [B2], usage_note: "Collective noun; normally no plural."}
+  - {id: arbeitsbedingung, lemma: Arbeitsbedingung, english: working condition, part_of_speech: noun, article: die, plural: die Arbeitsbedingungen, levels: [B2]}
+  - {id: lebensmittelverschwendung, lemma: Lebensmittelverschwendung, english: food waste, part_of_speech: noun, article: die, plural: null, levels: [B2]}
+  - {id: nachhaltig, lemma: nachhaltig, english: sustainable, part_of_speech: adjective, levels: [B2]}
+  - {id: verzichten_auf, lemma: verzichten auf, english: to do without, part_of_speech: verb, principal_parts: [verzichtet, verzichtete, hat verzichtet], levels: [B2]}
+  - {id: abhaengen_von, lemma: abhängen von, english: to depend on, part_of_speech: verb, principal_parts: [hängt ab, hing ab, hat abgehangen], levels: [B2]}
+  - {id: lieferkette, lemma: Lieferkette, english: supply chain, part_of_speech: noun, article: die, plural: die Lieferketten, levels: [C1]}
+  - {id: mehrwegpflicht, lemma: Mehrwegpflicht, english: reusable-packaging obligation, part_of_speech: noun, article: die, plural: die Mehrwegpflichten, levels: [C1]}
+  - {id: wirtschaftlichkeit, lemma: Wirtschaftlichkeit, english: economic viability, part_of_speech: noun, article: die, plural: null, levels: [C1]}
+  - {id: zielkonflikt, lemma: Zielkonflikt, english: conflict of objectives, part_of_speech: noun, article: der, plural: die Zielkonflikte, levels: [C1]}
+  - {id: rahmenbedingung, lemma: Rahmenbedingung, english: framework condition, part_of_speech: noun, article: die, plural: die Rahmenbedingungen, levels: [C1]}
+  - {id: abwaegen, lemma: abwägen, english: to weigh up, part_of_speech: verb, principal_parts: [wägt ab, wog ab, hat abgewogen], levels: [C1], chunks: ["Vor- und Nachteile abwägen"]}
+  - {id: sich_auswirken_auf, lemma: sich auswirken auf, english: to have an effect on, part_of_speech: verb, principal_parts: [wirkt sich aus, wirkte sich aus, hat sich ausgewirkt], levels: [C1]}
+  - {id: voraussetzen, lemma: voraussetzen, english: to presuppose / require, part_of_speech: verb, principal_parts: [setzt voraus, setzte voraus, hat vorausgesetzt], levels: [C1]}

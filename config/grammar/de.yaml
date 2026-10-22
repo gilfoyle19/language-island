@@ -1,0 +1,114 @@
+schema_version: 1
+skills:
+  - id: present_regular
+    title: Present tense
+    description: Conjugate common regular and café verbs in the present.
+    levels: [A1]
+    examples: ["Ich bestelle einen Kaffee.", "Was kostet der Kuchen?"]
+  - id: main_clause_v2
+    title: Verb-second word order
+    description: Put the finite verb in second position in statements.
+    levels: [A1]
+    prerequisites: [present_regular]
+    examples: ["Heute nehme ich einen Tee."]
+  - id: questions
+    title: Questions
+    description: Form yes-no and W-questions for service encounters.
+    levels: [A1]
+    prerequisites: [present_regular]
+    examples: ["Haben Sie Hafermilch?", "Wie viel kostet das?"]
+  - id: accusative_articles
+    title: Accusative articles
+    description: Mark direct objects with the correct definite or indefinite article.
+    levels: [A1]
+    examples: ["Ich nehme einen Kaffee und eine Brezel."]
+  - id: polite_moechten
+    title: Polite requests with möchten
+    description: Make simple polite requests with möchten and bitte.
+    levels: [A1]
+    prerequisites: [main_clause_v2]
+    examples: ["Ich möchte bitte zahlen."]
+  - id: perfect_tense
+    title: Conversational perfect
+    description: Report completed café events with haben or sein and a participle.
+    levels: [A2]
+    prerequisites: [present_regular]
+    examples: ["Ich habe einen Tee bestellt."]
+  - id: weil_clause
+    title: Reasons with weil
+    description: Give a reason using verb-final subordinate clause order.
+    levels: [A2]
+    prerequisites: [main_clause_v2]
+    examples: ["Ich frage, weil ich eine Allergie habe."]
+  - id: polite_konjunktiv
+    title: Polite Konjunktiv II
+    description: Use hätte, wäre, könnte, and würde for courteous requests.
+    levels: [A2]
+    prerequisites: [polite_moechten]
+    examples: ["Könnten Sie mir die Rechnung bringen?"]
+  - id: adjective_endings_basic
+    title: Basic adjective endings
+    description: Add common adjective endings after articles in café descriptions.
+    levels: [A2]
+    prerequisites: [accusative_articles]
+    examples: ["Ich nehme den warmen Apfelkuchen."]
+  - id: subordinate_contrast
+    title: Contrast and conditions
+    description: Connect detailed ideas with obwohl, wenn, and dass.
+    levels: [B1]
+    prerequisites: [weil_clause]
+    examples: ["Obwohl viel los ist, warte ich gern."]
+  - id: relative_clauses
+    title: Relative clauses
+    description: Identify or describe food, people, and places precisely.
+    levels: [B1]
+    prerequisites: [accusative_articles]
+    examples: ["Das ist der Kuchen, den Sie empfohlen haben."]
+  - id: hypothetical_konjunktiv
+    title: Hypothetical Konjunktiv II
+    description: Propose alternatives and describe unreal outcomes.
+    levels: [B1]
+    prerequisites: [polite_konjunktiv]
+    examples: ["Wenn die Suppe wärmer wäre, würde ich sie behalten."]
+  - id: passive_voice
+    title: Process passive
+    description: Describe preparation and service processes with werden.
+    levels: [B2]
+    prerequisites: [perfect_tense]
+    examples: ["Die Bohnen werden regional geröstet."]
+  - id: advanced_connectors
+    title: Causal and concessive connectors
+    description: Structure arguments with daher, dennoch, zumal, and insofern.
+    levels: [B2]
+    prerequisites: [subordinate_contrast]
+    examples: ["Die Lösung ist teurer; dennoch lohnt sie sich."]
+  - id: indirect_questions
+    title: Indirect questions
+    description: Ask tactful, embedded questions with verb-final order.
+    levels: [B2]
+    prerequisites: [weil_clause]
+    examples: ["Mich würde interessieren, woher der Kaffee stammt."]
+  - id: nominalisation
+    title: Nominal style
+    description: Shift between verbal and nominal forms in formal discussion.
+    levels: [B2]
+    prerequisites: [adjective_endings_basic]
+    examples: ["Die Einführung eines Pfandsystems senkt den Verbrauch."]
+  - id: reported_speech
+    title: Reported speech with Konjunktiv I
+    description: Attribute claims and positions without adopting them.
+    levels: [C1]
+    prerequisites: [hypothetical_konjunktiv]
+    examples: ["Die Betreiberin sagt, das System sei wirtschaftlich."]
+  - id: hedging_precision
+    title: Precise qualification
+    description: Calibrate claims with modal particles, adverbs, and limiting phrases.
+    levels: [C1]
+    prerequisites: [advanced_connectors]
+    examples: ["Das dürfte nur unter bestimmten Bedingungen zutreffen."]
+  - id: cohesive_argument
+    title: Cohesive extended argument
+    description: Signal stages, concessions, consequences, and conclusions clearly.
+    levels: [C1]
+    prerequisites: [advanced_connectors, nominalisation]
+    examples: ["Zunächst ist einzuräumen, dass die Umstellung Kosten verursacht."]

@@ -44,6 +44,7 @@ dev = [
     "pytest-cov>=7.1.0",
     "respx>=0.23.1",
     "ruff>=0.17.1",
+    "types-pyyaml>=6.0.12.20250915",
 ]
 
 [tool.pytest.ini_options]
