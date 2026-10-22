@@ -11,16 +11,23 @@ from language_island import __version__
 from language_island.curriculum import load_curriculum
 from language_island.diagnostics import run_diagnostics
 from language_island.settings import Settings, get_settings
+from language_island.storage import Database
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
     app_settings = settings or get_settings()
     curriculum = load_curriculum(app_settings.curriculum_dir)
+    database = Database(app_settings.database_path)
 
     @asynccontextmanager
-    async def lifespan(_: FastAPI) -> AsyncIterator[None]:
+    async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         app_settings.prepare_local_directories()
-        yield
+        await database.initialize()
+        app.state.database = database
+        try:
+            yield
+        finally:
+            await database.dispose()
 
     app = FastAPI(
         title=app_settings.app_name,

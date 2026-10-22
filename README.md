@@ -39,6 +39,12 @@ German vocabulary and grammar catalogs, tutor personalities, feedback rules, and
 progression gates. The API exposes the island at `http://127.0.0.1:8000/api/islands/cafe`.
 Invalid YAML, duplicate IDs, or broken cross-file references stop the API at startup.
 
+Learning state is stored locally in `data/language_island.sqlite3`. The storage layer records
+ordered bilingual transcript turns and atomic learning evidence for vocabulary, grammar, tasks,
+listening, transfer, and level objectives. Readiness is calculated against every quantitative
+gate in `config/progression.yaml`; a word counts as learned after at least three delayed checks
+with 80% recall.
+
 Run local diagnostics without starting either web service:
 
 ```powershell
