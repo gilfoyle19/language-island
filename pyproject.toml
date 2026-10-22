@@ -1,0 +1,64 @@
+[project]
+name = "language-island"
+version = "0.1.0"
+description = "A local-first voice tutor for learning German through language islands"
+readme = "README.md"
+authors = [
+    { name = "gilfoyle19", email = "kartheekc19@gmail.com" }
+]
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "fastapi>=0.160.0",
+    "faster-whisper>=1.2.1",
+    "httpx>=0.28.1",
+    "langchain-ollama>=1.1.0",
+    "langgraph>=1.2.16",
+    "numpy>=2.4.6",
+    "piper-tts>=1.8.0",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.1",
+    "python-multipart>=0.0.32",
+    "pyyaml>=6.0.3",
+    "silero-vad[onnx-cpu]>=6.2.3",
+    "soundfile>=0.14.0",
+    "soxr>=1.1.0",
+    "sqlalchemy>=2.1.6",
+    "streamlit>=1.66.1",
+    "uvicorn[standard]>=0.54.0",
+    "websockets>=16.1.1",
+]
+
+[project.scripts]
+language-island = "language_island:main"
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "respx>=0.23.1",
+    "ruff>=0.17.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -p no:cacheprovider"
+asyncio_mode = "strict"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["language_island"]
