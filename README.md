@@ -45,6 +45,31 @@ listening, transfer, and level objectives. Readiness is calculated against every
 gate in `config/progression.yaml`; a word counts as learned after at least three delayed checks
 with 80% recall.
 
+## Text conversation API
+
+Commit 4 adds the Ollama and LangGraph conversation loop. Start an A1 Café conversation with:
+
+```powershell
+$conversation = Invoke-RestMethod `
+  -Method Post `
+  -Uri http://127.0.0.1:8000/api/conversations `
+  -ContentType application/json `
+  -Body '{"level":"A1","personality_id":"patient_barista"}'
+```
+
+Submit a learner turn with:
+
+```powershell
+Invoke-RestMethod `
+  -Method Post `
+  -Uri "http://127.0.0.1:8000/api/conversations/$($conversation.session_id)/turns" `
+  -ContentType application/json `
+  -Body '{"text":"Ich möchte ein Kaffee."}'
+```
+
+An incorrect turn returns `status: retry` and `required_retry`. The graph will repeat the
+correction until that German text is supplied; only then does the tutor continue the scenario.
+
 Run local diagnostics without starting either web service:
 
 ```powershell

@@ -100,3 +100,15 @@ class LearningEvent(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utc_now)
 
     session: Mapped[ConversationSession] = relationship(back_populates="events")
+
+
+class TutorRuntimeState(Base):
+    __tablename__ = "tutor_runtime_state"
+
+    session_id: Mapped[str] = mapped_column(
+        ForeignKey("conversation_sessions.id", ondelete="CASCADE"), primary_key=True
+    )
+    state: Mapped[dict[str, Any]] = mapped_column(JSON, default=dict)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=utc_now, onupdate=utc_now
+    )

@@ -19,6 +19,7 @@ from language_island.storage.models import (
     ConversationTurn,
     Learner,
     LearningEvent,
+    TutorRuntimeState,
     utc_now,
 )
 
@@ -42,6 +43,10 @@ class LearningStore:
     async def get_learner(self, learner_id: str) -> Learner | None:
         async with self.database.session() as session:
             return await session.get(Learner, learner_id)
+
+    async def get_session(self, session_id: str) -> ConversationSession | None:
+        async with self.database.session() as session:
+            return await session.get(ConversationSession, session_id)
 
     async def start_session(
         self,
@@ -110,6 +115,21 @@ class LearningStore:
                 .order_by(ConversationTurn.sequence)
             )
             return list(result)
+
+    async def get_tutor_state(self, session_id: str) -> dict[str, Any]:
+        async with self.database.session() as session:
+            state = await session.get(TutorRuntimeState, session_id)
+            return dict(state.state) if state is not None else {}
+
+    async def set_tutor_state(self, session_id: str, state: dict[str, Any]) -> None:
+        async with self.database.session() as session, session.begin():
+            if await session.get(ConversationSession, session_id) is None:
+                raise ValueError(f"Unknown session: {session_id}")
+            record = await session.get(TutorRuntimeState, session_id)
+            if record is None:
+                session.add(TutorRuntimeState(session_id=session_id, state=state))
+            else:
+                record.state = state
 
     async def record_event(
         self,
